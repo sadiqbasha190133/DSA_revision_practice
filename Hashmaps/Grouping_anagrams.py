@@ -8,11 +8,8 @@ class Solution:
                 freq[sorted_word] = [sorted_word]
             else:
                 freq[sorted_word].append(word)
-        ans = []
-        for value in freq.values():
-            ans.append(value)
-        return ans
-
+        return list(freq.values())
+    
 strs = ["eat","tea","tan","ate","nat","bat"]
 print(Solution().groupAnagrams(strs))
         
